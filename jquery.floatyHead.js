@@ -58,7 +58,7 @@ Notes:
 				var Offset = $(this).data('offset');
 				var MaxOffset = $(this).data('maxOffset');
 				
-				if( ScrollTop > Offset.top && ScrollTop < MaxOffset ) {
+				if( ScrollTop > Offset.top && ScrollTop < MaxOffset && $(".floatyBase").css("display") != "none") {
 					$(this).css('position','absolute').css('top', ScrollTop + 'px').css('left', Offset.left + 'px').show();
 				} else {
 					$(this).hide();
