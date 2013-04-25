@@ -78,7 +78,12 @@ Notes:
 					$(this).css('width', Width);
 				});
 				
-				$(this).clone(true).removeClass('floatyBase').addClass('floatyHead').css('position', 'fixed').css('left', $(this).data('offset').left).css('top', $(this).data('offset').top).find('tbody').remove().end().appendTo('body');
+				$(this).clone(true).removeClass('floatyBase').addClass('floatyHead')
+					.css('position', 'fixed')
+					.css('width', $(this).get(0).offsetWidth)
+					.css('left', $(this).data('offset').left)
+					.css('top', $(this).data('offset').top)
+					.find('tbody').remove().end().appendTo('body');
 			});
 			
 			methods.update();
